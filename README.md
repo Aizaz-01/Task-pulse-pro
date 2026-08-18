@@ -1,87 +1,267 @@
-# 🚀 Task Pulse Pro — Enterprise Workforce & Agile Task Portal
+# 🚀 Task Pulse Pro — Workforce & Task Management Portal
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS--ES6+-2563eb)](https://developer.mozilla.org/)
-[![Status](https://img.shields.io/badge/Build-Single--File%20Standalone-10b981)](index.html)
+Task Pulse Pro is a web-based **workforce and task management portal** developed to help software houses and teams organize tasks, monitor employee progress, manage priorities, and track overall team performance through a centralized dashboard.
 
-**Task Pulse Pro** is an executive-grade workforce management and task tracking application engineered for tech companies, digital agencies, and software houses. Built as a 100% self-contained single-file HTML application with zero external framework dependencies, it provides real-time team analytics, role-based access control (RBAC), custom member password management, and interactive SVG trajectory graphs.
-
-Developed during a Software Engineering Internship at **Code Bean Software House**.
+The project was developed as part of my **Software Engineering Internship at Code Bean Software House**, where I worked on implementing a practical task management solution with role-based access, interactive analytics, task tracking, and reporting features.
 
 ---
 
-## 🌟 Key Features Checklist
+## 📌 Project Overview
 
-### 1. 👑 Super Admin Governance & Strict RBAC
-* **Exclusive Task Assignment**: Only Super Admin (`Aizaz Nisar`) can assign new work tasks to employees.
-* **Exclusive Due Date & Spec Modifications**: Admins can edit task details, adjust due dates with date pickers, and re-prioritize deliverables (`✏️ Edit / Date`).
-* **Member Password Management**: Assign and view custom login passwords for team members directly from the Admin Roster view (`🔑 Password: <custom_password>`).
-* **Soft-Delete History Archive**: Soft-delete tasks and inspect historical deleted tasks (`Deleted History 🗑️`).
+Task Pulse Pro provides separate experiences for **Super Admins** and **Employees**.
 
-### 2. 📈 Interactive SVG Visual Graphs
-* **Per-Developer Curve & Area Graphs**: Pure SVG line and gradient area trajectory graphs plotting 4 metrics per developer:
-  * 🔵 **Node 1: Assigned Tasks**
-  * 🟢 **Node 2: Completed Tasks**
-  * 🔴 **Node 3: Overdue Tasks**
-  * ⚪ **Node 4: Deleted Tasks**
-* **Real-Time Efficiency Score**: Automated performance score percentage for each team member.
+The Super Admin can create and manage tasks, assign work to team members, modify deadlines and priorities, monitor employee performance, and access reporting features.
 
-### 3. 👥 Employee Portal (Restricted Mode)
-* **Distraction-Free Workspace**: Employees log in to view tasks assigned specifically to them by Super Admin.
-* **Status Updates**: Quick dropdown controls to advance task status (`To Do` ➔ `In Progress` ➔ `Completed ✅`).
-* **Urgency Reminders**: Automated deadline alert banner for upcoming due dates.
-* **Strict Permission Guards**: Task creation and date editing are disabled and guarded on the backend.
+Employees have a restricted workspace where they can view their assigned tasks and update their task progress.
 
-### 4. 🎨 Executive Theme & Priority Scheme
-* **Sapphire & Midnight Slate Theme**: Built with CSS variables (`--bg-body: #0b1329`, `--primary: #2563eb`), ambient glow lights, and card glassmorphism.
-* **Priority Color Coding**:
-  * 🔥 **Very Important** (Crimson Red `#dc2626`)
-  * ⚡ **Important** (Amber Orange `#f59e0b`)
-  * 🔹 **Not Much Important** (Teal Sapphire `#0284c7`)
+The application is built as a **standalone HTML application** using HTML5, CSS3, and Vanilla JavaScript, with browser `localStorage` used for client-side data persistence.
 
-### 5. 📊 Reporting & Security Tools
-* **Excel (CSV) Export**: Instant single-click sprint report generation (`.csv`).
-* **PDF Print Report**: `@media print` formatted stylesheet for clean PDF export.
-* **Forgot Password OTP Recovery Wizard**: 3-step modal (Enter Email ➔ 4-digit OTP alert ➔ Reset Password).
+---
+
+## ✨ Key Features
+
+### 👑 Super Admin Dashboard
+
+* Create and assign tasks to employees
+* Edit task information and deadlines
+* Change task priorities
+* Monitor team members and assigned workloads
+* View task completion and performance statistics
+* Manage employee login credentials
+* Search and review task history
+* Soft-delete tasks while maintaining deleted-task history
+* Export task reports as CSV
+* Generate print-ready PDF reports
+
+### 👥 Employee Portal
+
+Employees have access to a focused workspace containing only their assigned tasks.
+
+Features include:
+
+* View assigned tasks
+* Track task priorities
+* Update task status
+* Progress workflow:
+
+  * `To Do`
+  * `In Progress`
+  * `Completed`
+* View upcoming deadlines
+* Receive deadline reminders
+* Restricted access to administrative functions
+
+### 📊 Team Analytics
+
+The dashboard includes interactive SVG-based visualizations for monitoring team activity.
+
+Metrics include:
+
+* Assigned Tasks
+* Completed Tasks
+* Overdue Tasks
+* Deleted Tasks
+* Individual Efficiency Score
+
+These visualizations provide a quick overview of workload distribution and employee progress.
+
+### 🔐 Role-Based Access Control
+
+Task Pulse Pro implements role-based permissions to separate administrative and employee functionality.
+
+**Super Admin**
+
+* Full task management access
+* Employee management
+* Deadline and priority modification
+* Reporting and analytics
+
+**Employee**
+
+* View assigned tasks
+* Update task progress
+* No access to administrative task creation or management
+
+### 🎨 User Interface
+
+The interface follows a modern dashboard design with:
+
+* Midnight Slate & Sapphire color scheme
+* Responsive layouts
+* Glassmorphism-inspired components
+* CSS custom properties
+* Interactive cards
+* Status indicators
+* Priority-based visual styling
+* SVG data visualization
+
+### 🚦 Task Priority System
+
+| Priority              | Description                                       |
+| --------------------- | ------------------------------------------------- |
+| 🔥 Very Important     | Critical tasks requiring immediate attention      |
+| ⚡ Important           | High-priority tasks that should be completed soon |
+| 🔹 Not Much Important | Lower-priority tasks                              |
+
+### 📑 Reporting
+
+Task Pulse Pro supports:
+
+* **CSV Export** — Export task and sprint information for spreadsheet analysis
+* **PDF/Print Reports** — Generate clean, print-friendly task reports using CSS print styles
 
 ---
 
 ## 🛠️ Technology Stack
 
-* **Frontend**: HTML5 (Semantic Layout), CSS3 (Custom Design Tokens, Glassmorphism, SVG Gradients)
-* **Logic**: Vanilla JavaScript (ES6+, Functional State Engine, Event Delegation)
-* **Graphics**: Native Inline SVG Engine (Zero heavy Chart.js/D3 dependencies)
-* **Storage & State**: Web Storage API (`localStorage`)
-* **Architecture**: 100% Standalone Single-File Document (`index.html`)
+| Technology            | Purpose                                                      |
+| --------------------- | ------------------------------------------------------------ |
+| **HTML5**             | Application structure and semantic markup                    |
+| **CSS3**              | UI design, responsive layouts, animations, and design system |
+| **JavaScript (ES6+)** | Application logic, state management, and interactions        |
+| **SVG**               | Interactive performance and trajectory graphs                |
+| **Web Storage API**   | Client-side data persistence using `localStorage`            |
+| **Git & GitHub**      | Version control and project hosting                          |
+
+### Architecture
+
+The project follows a **single-file standalone architecture**:
+
+```text
+Task Pulse Pro
+│
+└── index.html
+    ├── HTML Structure
+    ├── CSS Styling
+    ├── SVG Graphics
+    └── JavaScript Application Logic
+```
+
+No external frontend framework or build system is required.
 
 ---
 
-## 🔑 Default Demonstration Credentials
+## 🔑 Demo Credentials
 
-| Role | Email | Password | Full Name |
-| :--- | :--- | :--- | :--- |
-| **Super Admin** | `admin@softwarehouse.com` | `admin123` | **Aizaz Nisar** |
-| **Frontend Dev** | `alex@softwarehouse.com` | `employee123` | **Alex Johnson** |
-| **Backend Lead** | `maria@softwarehouse.com` | `employee123` | **Maria Garcia** |
-| **UI/UX Designer** | `david@softwarehouse.com` | `employee123` | **David Miller** |
-| **QA Lead** | `samira@softwarehouse.com` | `employee123` | **Samira Ahmed** |
+The following credentials can be used to explore the demonstration version.
 
----
+| Role               | Email                      | Password      | Name         |
+| ------------------ | -------------------------- | ------------- | ------------ |
+| Super Admin        | `admin@softwarehouse.com`  | `admin123`    | Aizaz Nisar  |
+| Frontend Developer | `alex@softwarehouse.com`   | `employee123` | Alex Johnson |
+| Backend Lead       | `maria@softwarehouse.com`  | `employee123` | Maria Garcia |
+| UI/UX Designer     | `david@softwarehouse.com`  | `employee123` | David Miller |
+| QA Lead            | `samira@softwarehouse.com` | `employee123` | Samira Ahmed |
 
-## 🚀 Quick Start & Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/task-pulse-pro.git
-   ```
-2. **Launch the application**:
-   * Double-click `index.html` or open it in any modern web browser (Chrome, Edge, Firefox, Safari).
-   * **No Node.js, npm install, or local server required!**
+> **Note:** These credentials are intended for demonstration purposes only. This standalone version uses browser-side storage and should not be considered production-grade authentication.
 
 ---
 
-## 📜 License & Acknowledgments
+## 🚀 Getting Started
 
-This project is open-source under the [MIT License](LICENSE).
+### 1. Clone the Repository
 
-Developed with guidance and support during internship at **Code Bean Software House**.
+```bash
+git clone https://github.com/YOUR_USERNAME/task-pulse-pro.git
+```
+
+### 2. Open the Project
+
+Navigate to the project directory and open:
+
+```text
+index.html
+```
+
+You can simply double-click the file or open it in a modern browser.
+
+### 3. No Installation Required
+
+Task Pulse Pro does not require:
+
+* Node.js
+* npm
+* Package installation
+* Database setup
+* Backend server
+* Build tools
+
+It runs directly in a modern web browser.
+
+---
+
+## 📂 Project Structure
+
+```text
+task-pulse-pro/
+│
+├── index.html
+├── README.md
+└── LICENSE
+```
+
+The core application is contained within `index.html`.
+
+---
+
+## 🎯 Learning Objectives
+
+This project provided practical experience in:
+
+* Frontend web development
+* JavaScript application logic
+* DOM manipulation
+* Event handling and event delegation
+* Role-based UI permissions
+* Client-side state management
+* Browser `localStorage`
+* SVG-based data visualization
+* Responsive UI development
+* Dashboard design
+* CSV report generation
+* Print/PDF report styling
+* Git and GitHub workflow
+* Building a complete application from requirements
+
+---
+
+## 🏢 Internship Project
+
+**Developed during my Software Engineering Internship at Code Bean Software House.**
+
+This project allowed me to apply frontend development concepts in a practical software-house environment and gain hands-on experience with application design, task management workflows, UI development, JavaScript functionality, and project documentation.
+
+**Intern:** Aizaz Nisar
+**Organization:** Code Bean Software House
+**Project:** Task Pulse Pro
+**Technology:** HTML5, CSS3, JavaScript (ES6+)
+
+---
+
+## 🔮 Future Improvements
+
+Potential improvements for a production-ready version include:
+
+* Backend API integration
+* Database-based data persistence
+* Secure server-side authentication
+* Password hashing and account security
+* Multi-company/tenant support
+* Real-time notifications
+* Advanced analytics
+* User profile management
+* Cloud deployment
+* Automated testing
+* API-based reporting
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to **Code Bean Software House** for providing the internship environment and opportunity to work on practical software development projects.
+
+---
+
+### ⭐ Project Summary
+
+**Task Pulse Pro** demonstrates how a lightweight frontend application can provide a structured workflow for task assignment, employee progress tracking, team analytics, and reporting while maintaining a clean and responsive user experience.
