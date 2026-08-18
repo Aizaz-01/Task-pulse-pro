@@ -161,8 +161,7 @@ The following credentials can be used to explore the demonstration version.
 
 ### 1. Clone the Repository
 
-https://github.com/YOUR_USERNAME/task-pulse-pro.git
-```](https://github.com/Aizaz-01/Task-pulse-pro/tree/main)
+https://github.com/Aizaz-01/Task-pulse-pro/tree/main
 
 ### 2. Open the Project
 
