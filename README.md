@@ -2,7 +2,7 @@
 
 Task Pulse Pro is a web-based **workforce and task management portal** developed to help software houses and teams organize tasks, monitor employee progress, manage priorities, and track overall team performance through a centralized dashboard.
 
-The project was developed as part of my ** Internship at Code Bean Software House**, where I worked on implementing a practical task management solution with role-based access, interactive analytics, task tracking, and reporting features.
+The project was developed as part of my **Internship at Code Bean Software House**, where I worked on implementing a practical task management solution with role-based access, interactive analytics, task tracking, and reporting features.
 
 ---
 
